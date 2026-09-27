@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Count Form Elements</title>
+
+    <script>
+        function countElements()
+        {
+            var form = document.getElementById("myForm");
+
+            var count = form.elements.length;
+
+            document.getElementById("result").innerHTML =
+                "Number of elements = " + count;
+        }
+    </script>
+</head>
+
+<body>
+
+<h2>Form Element Count</h2>
+
+<form id="myForm">
+
+    Name:
+    <input type="text" name="name"><br><br>
+
+    Gender:
+    <input type="radio" name="gender"> Male
+    <input type="radio" name="gender"> Female
+    <br><br>
+
+    Languages:
+    <input type="checkbox" name="html"> HTML
+    <input type="checkbox" name="js"> JavaScript
+    <br><br>
+
+    <input type="button"
+           value="Count Elements"
+           onclick="countElements()">
+
+</form>
+
+<p id="result"></p>
+
+</body>
+</html>
